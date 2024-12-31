@@ -93,7 +93,7 @@ if __name__ == "__main__":
     # Instantiate the NewsFetcher
     news_fetcher = NewsFetcher(config_path="config.json")
 
-    # Fetch news about Tesla within a date range
+    # Fetch news about Tesla
     articles = news_fetcher.fetch_news(
         query="Tesla",
         language="en",
