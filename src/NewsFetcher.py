@@ -87,16 +87,22 @@ class NewsFetcher:
         return cleaned_articles
 
 
-# Example Usage
+
+#Example usuage (TEST)
 if __name__ == "__main__":
-    api_key = "YOUR_NEWSAPI_KEY"  # Replace with your actual NewsAPI key
-    news_fetcher = NewsFetcher(api_key)
+    # Instantiate the NewsFetcher
+    news_fetcher = NewsFetcher(config_path="config.json")
 
-    # Fetch news about Tesla
-    articles = news_fetcher.fetch_news(query="Tesla", from_date="2023-01-01", to_date="2023-01-10")
+    # Fetch news about Tesla within a date range
+    articles = news_fetcher.fetch_news(
+        query="Tesla",
+        language="en",
+        page_size=20
+    )
 
-    # Clean the fetched articles
-    cleaned_articles = news_fetcher.clean_news(articles)
-
-    # Print the cleaned articles
-    print(json.dumps(cleaned_articles, indent=2))
+    # Print the articles
+    for article in articles:
+        print(f"Title: {article['title']}")
+        print(f"Published At: {article['publishedAt']}")
+        print(f"Source: {article['source']['name']}")
+        print("-----")
