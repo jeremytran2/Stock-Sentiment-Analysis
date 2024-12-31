@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f5f663af-4616-4a9b-9cc2-07378537a7f7" name="Changes" comment="Fixed comment" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "jeremytran2"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/jeremytran2/Stock-Sentiment-Analysis.git",
+    "accountId": "54bf61a9-457a-47b8-b310-24d261671f11"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2qx7PYcx9EOrukNX4r4gnotsQBF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.NewsFetcher.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/jerem/Stock-Sentiment-Analysis",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f5f663af-4616-4a9b-9cc2-07378537a7f7" name="Changes" comment="" />
+      <created>1735592363351</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1735592363351</updated>
+      <workItem from="1735592364940" duration="8916000" />
+    </task>
+    <task id="LOCAL-00001" summary="Implement NewsFetcher class">
+      <option name="closed" value="true" />
+      <created>1735593059927</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1735593059927</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Unversioned Files">
+      <option name="closed" value="true" />
+      <created>1735593095320</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1735593095320</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Create all classes that will need to be implemented">
+      <option name="closed" value="true" />
+      <created>1735593224778</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1735593224778</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Create all classes that will need to be implemented">
+      <option name="closed" value="true" />
+      <created>1735594241108</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1735594241108</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Implement config.json to store API keys">
+      <option name="closed" value="true" />
+      <created>1735614909119</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1735614909119</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Implement NewsFetcher methods and utilize news API key via the config.json file">
+      <option name="closed" value="true" />
+      <created>1735614946637</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1735614946637</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Include config.json as a file to ignore">
+      <option name="closed" value="true" />
+      <created>1735615351521</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1735615351521</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Update example usuage testing using &quot;Tesla&quot; as the query">
+      <option name="closed" value="true" />
+      <created>1735617718471</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1735617718471</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fixed comment">
+      <option name="closed" value="true" />
+      <created>1735618305268</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1735618305268</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Implement NewsFetcher class" />
+    <MESSAGE value="Unversioned Files" />
+    <MESSAGE value="Create all classes that will need to be implemented" />
+    <MESSAGE value="Implement config.json to store API keys" />
+    <MESSAGE value="Implement NewsFetcher methods and utilize news API key via the config.json file" />
+    <MESSAGE value="Include config.json as a file to ignore" />
+    <MESSAGE value="Update example usuage testing using &quot;Tesla&quot; as the query" />
+    <MESSAGE value="Fixed comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed comment" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Stock_Sentiment_Analysis$NewsFetcher.coverage" NAME="NewsFetcher Coverage Results" MODIFIED="1735617642034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+  </component>
+</project>
