@@ -97,7 +97,7 @@ if __name__ == "__main__":
     articles = news_fetcher.fetch_news(
         query="Tesla",
         language="en",
-        page_size=20
+        page_size=30
     )
 
     # Print the articles
