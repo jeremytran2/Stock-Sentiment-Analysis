@@ -41,7 +41,7 @@ class StockDataFetcher:
             return pd.DataFrame()
 
 
-# Example Usage
+# Example Usage (TEST)
 if __name__ == "__main__":
     # Instantiate the StockDataFetcher
     fetcher = StockDataFetcher()
