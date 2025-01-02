@@ -54,5 +54,5 @@ if __name__ == "__main__":
 
     # Display the data
     if not stock_data.empty:
-        print(stock_data)  # Show the first 5 rows of the DataFrame
+        print(stock_data)
 
