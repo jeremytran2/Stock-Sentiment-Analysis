@@ -47,7 +47,7 @@ if __name__ == "__main__":
     fetcher = StockDataFetcher()
 
     # Fetch historical stock data for Tesla for January 2024
-    symbol = "TSLA"
+    symbol = "PLTR"
     start_date = "2024-01-01"
     end_date = "2025-01-01"
     stock_data = fetcher.fetch_stock_data(symbol, start_date, end_date)
