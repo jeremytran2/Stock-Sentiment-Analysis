@@ -1,5 +1,6 @@
 import requests
 import json
+import pandas as pd
 
 class NewsFetcher:
     """
@@ -35,7 +36,7 @@ class NewsFetcher:
             page_size (int): Number of articles to fetch per page (default is 20).
 
         Returns:
-            list: A list of news articles (dictionaries) or an empty list if no articles are found.
+            pd.DataFrame: A DataFrame of news articles with a standardized timestamp column.
         """
         # Define request parameters
         params = {
@@ -55,14 +56,27 @@ class NewsFetcher:
 
             # Check if the request was successful
             if data.get("status") == "ok":
-                return data.get("articles", [])
+                articles = data.get("articles", [])
+
+                # Convert to DataFrame
+                if articles:
+                    df = pd.DataFrame(articles)
+
+                    # Convert 'publishedAt' to 'timestamp' and format the date
+                    df["timestamp"] = pd.to_datetime(df["publishedAt"]).dt.strftime("%Y-%m-%d")
+                    df.drop(columns=["publishedAt"], inplace=True)  # Drop the original 'publishedAt' column
+
+                    return df
+                else:
+                    print("No articles found.")
+                    return pd.DataFrame()  # Return an empty DataFrame if no articles are found
             else:
                 print(f"Error: {data.get('message')}")
-                return []
+                return pd.DataFrame()
 
         except requests.exceptions.RequestException as e:
             print(f"An error occurred: {e}")
-            return []
+            return pd.DataFrame()
 
     def clean_news(self, articles):
         """
@@ -100,9 +114,13 @@ if __name__ == "__main__":
         page_size=30
     )
 
-    # Print the articles
-    for article in articles:
-        print(f"Title: {article['title']}")
-        print(f"Published At: {article['publishedAt']}")
-        print(f"Source: {article['source']['name']}")
-        print("-----")
+    # # Print the articles
+    # for article in articles:
+    #     print(f"Title: {article['title']}")
+    #     print(f"Published At: {article['publishedAt']}")
+    #     print(f"Source: {article['source']['name']}")
+    #     print("-----")
+
+    print(articles.to_string())
+    print(news_fetcher.fetch_news(query="Tesla", from_date="2024-12-03", to_date="2024-12-31"))
+
