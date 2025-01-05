@@ -24,7 +24,7 @@ class NewsFetcher:
         self.api_key = config["news_api_key"]
         self.base_url = "https://newsapi.org/v2/everything"
 
-    def fetch_news(self, query, from_date=None, to_date=None, language="en", page_size=20):
+    def fetch_news(self, query, from_date=None, to_date=None, language="en", page_size=None):
         """
         Fetches news articles based on the given query and filters.
 
@@ -33,8 +33,7 @@ class NewsFetcher:
             from_date (str): The starting date for the news (YYYY-MM-DD). Default is None.
             to_date (str): The ending date for the news (YYYY-MM-DD). Default is None.
             language (str): The language of the articles (default is "en").
-            page_size (int): Number of articles to fetch per page (default is 20).
-
+            page_size (int): Number of articles to fetch per page
         Returns:
             pd.DataFrame: A DataFrame of news articles with a standardized timestamp column.
         """
@@ -63,7 +62,7 @@ class NewsFetcher:
                     df = pd.DataFrame(articles)
 
                     # Convert 'publishedAt' to 'timestamp' and format the date
-                    df["timestamp"] = pd.to_datetime(df["publishedAt"]).dt.strftime("%Y-%m-%d")
+                    df["timestamp"] = pd.to_datetime(df["publishedAt"]).dt.date
                     df.drop(columns=["publishedAt"], inplace=True)  # Drop the original 'publishedAt' column
 
                     return df
