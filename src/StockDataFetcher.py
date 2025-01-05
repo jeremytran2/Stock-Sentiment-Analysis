@@ -21,7 +21,7 @@ class StockDataFetcher:
             end_date (str): The end date in "YYYY-MM-DD" format.
 
         Returns:
-            pd.DataFrame: A DataFrame containing the historical stock data.
+            pd.DataFrame: A DataFrame containing the historical stock data with a timestamp column.
         """
         try:
             # Fetch data using yfinance
@@ -33,13 +33,20 @@ class StockDataFetcher:
                 print(f"No data found for {symbol} between {start_date} and {end_date}.")
                 return pd.DataFrame()
 
-            # Return the historical stock data
+            # Reset the index to convert the Date index into a column
+            data.reset_index(inplace=True)
+
+            # Rename the date column to timestamp
+            data.rename(columns={"Date": "timestamp"}, inplace=True)
+
+            # Convert the timestamp column to date only
+            data["timestamp"] = pd.to_datetime(data["timestamp"]).dt.date
+
             return data
 
         except Exception as e:
             print(f"An error occurred while fetching stock data: {e}")
             return pd.DataFrame()
-
 
 # Example Usage (TEST)
 if __name__ == "__main__":
@@ -47,12 +54,12 @@ if __name__ == "__main__":
     fetcher = StockDataFetcher()
 
     # Fetch historical stock data for Tesla for January 2024
-    symbol = "PLTR"
-    start_date = "2024-01-01"
-    end_date = "2025-01-01"
+    symbol = "TSLA"
+    start_date = "2024-12-03"
+    end_date = "2025-12-31"
     stock_data = fetcher.fetch_stock_data(symbol, start_date, end_date)
 
     # Display the data
     if not stock_data.empty:
-        print(stock_data)
+        print(stock_data.to_string())
 
